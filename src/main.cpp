@@ -24,16 +24,15 @@ void ppmOnEdge(int gpio, int level, uint32_t tick) {
 
 		if (deltaTime >= ppmSyncLength) { // Sync
 			currentChannel = 0;
-			/*
 			for(int j=0;j<ppmChannelsNumber;++j){
 				 *(mem+j) = channels[j];
-			}*/
+			}
 			return;
 		}
 
 		if (currentChannel < ppmChannelsNumber) {
-			//channels[currentChannel++] = deltaTime;
-			*(mem+currentChannel+1) = deltaTime;
+			channels[currentChannel++] = deltaTime;
+			(mem+currentChannel+1) = deltaTime;
 		}
 		return;
 	}
