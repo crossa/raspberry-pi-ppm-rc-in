@@ -76,10 +76,9 @@ int main(int argc, char *argv[]) {
 		}
 		mem=(int*)p;
 		//--------------------------------------//
-		/*
 		pthread_t thread;
 		pthread_create(&thread,NULL,start_ppm_listener,NULL);
-		pthread_join(thread,NULL);*/
+		pthread_join(thread,NULL);
 		start_ppm_listener(NULL);
 		return 0x00;
 	}
