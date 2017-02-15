@@ -33,7 +33,7 @@ void ppmOnEdge(int gpio, int level, uint32_t tick) {
 
 		if (currentChannel < ppmChannelsNumber) {
 			//channels[currentChannel++] = deltaTime;
-			*(mem+j) = deltaTime;
+			*(mem+currentChannel+1) = deltaTime;
 		}
 		return;
 	}
