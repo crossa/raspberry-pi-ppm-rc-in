@@ -43,9 +43,8 @@ void *start_ppm_listener(void *p){
 	gpioInitialise();
 	previousTick = gpioTick();
 	gpioSetAlertFunc(ppmInputGpio, ppmOnEdge);
-	pthread_detach (pthread_self ());
 	while(1)
-		sleep(30);
+		sleep(10);
 }
 
 
@@ -77,10 +76,11 @@ int main(int argc, char *argv[]) {
 		}
 		mem=(int*)p;
 		//--------------------------------------//
-
+		/*
 		pthread_t thread;
 		pthread_create(&thread,NULL,start_ppm_listener,NULL);
-		pthread_join(thread,NULL);
+		pthread_join(thread,NULL);*/
+		start_ppm_listener();
 		return 0x00;
 	}
 
