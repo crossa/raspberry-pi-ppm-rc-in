@@ -38,8 +38,11 @@ $sudo reboot
 $sudo ps aux | grep ppmdecode
 
 1.将8通道接收机连接到PPM编码器 （Connect your 8 channel reciver to the ppmencode）
+
 2.PPM编码器的GND 连接到  树莓派的GND ( Connect  the gnd of ppmencode to the  gnd of raspberry pi )
+
 3.PPM编码器的SIGNAL／PWM 连接到  树莓派的GPIO.7( Connect  the pwm/singal pin of  ppmencode to the GPIO of raspberry pi )
+
 3.PPM编码器的+ 连接到 正极（Connect  the  VCC pin of ppmencode to the VCC supplier）
 
 #测试（Testing）
