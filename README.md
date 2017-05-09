@@ -31,7 +31,7 @@ $sudo systemctl enabled rc.local
 $sudo reboot
 
 
-#硬件准备（plug the ppmencode）
+# 硬件准备（plug the ppmencode）
 
 首先确定ppmdecode正在运行。（Check the process and make sure that the ppmdecode is running）
 
@@ -45,7 +45,7 @@ $sudo ps aux | grep ppmdecode
 
 3.PPM编码器的+ 连接到 正极（Connect  the  VCC pin of ppmencode to the VCC supplier）
 
-#测试（Testing）
+# 测试（Testing）
 
 1.打开遥控器.（Power on your  transmitter）
 
