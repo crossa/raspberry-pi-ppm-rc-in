@@ -2,7 +2,7 @@
 
 树莓派PPM解码用户空间驱动，直接读取PPM编码器输入，GPIO 方式读取，实时解码，并存入SHM中， key 2048。
 
-PPPM decodeer for raspberry pi running in the user space.
+PPM decoder for raspberry pi running in the user space.
 Reading the ppm from gpio.7 decode it and save the pwm of each channel into SHM.
 
 # 软件准备(install the ppmdecode)
