@@ -3,7 +3,8 @@
 PPPM decodeer for raspberry pi running in the user space.
 Reading the ppm from gpio.7 decode it and save the pwm of each channel into SHM.
 
-# 软件准备(install the ppmdecode)
+# 软件准备
+(install the ppmdecode)
 
 $ sudo apt-get install pigpio
 
@@ -14,21 +15,30 @@ $ cd raspberry-pi-ppm-rc-in
 $ ./configure && make && make install
 
 
-# PPM解码器启动(startup the ppmdecode)
+# PPM解码器启动
+(startup the ppmdecode)
+
 $ sudo nohup  ppmdecode L &
 
 # PPM解码开机自启动(startup the ppmdecode with system)
 
 $ sudo echo "nohup ppmdecode L &" >> /etc/rc.local
 
-#使用systemd管理的系统，需启用rc.local,然后重新启动系统(For systemd managed system, rc.local service should be enabled.)
+#使用systemd管理的系统，需启用rc.local,然后重新启动系统
+(For systemd managed system, rc.local service should be enabled.)
+
 $sudo systemctl enabled rc.local
+
 $sudo reboot
 
 
-#硬件准备（plug the ppmencode）
+#硬件准备
+（plug the ppmencode）
 
-首先确定ppmdecode正在运行。（Check the process and make sure that the ppmdecode is running）
+首先确定ppmdecode正在运行。
+
+（Check the process and make sure that the ppmdecode is running）
+
 $sudo ps aux | grep ppmdecode
 
 1.将8通道接收机连接到PPM编码器 （Connect your 8 channel reciver to the ppmencode）
