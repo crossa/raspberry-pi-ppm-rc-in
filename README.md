@@ -4,9 +4,13 @@ PPPM decodeer for raspberry pi running in the user space.
 Reading the ppm from gpio.7 decode it and save the pwm of each channel into SHM.
 
 # 软件准备(install the ppmdecode)
+
 $ sudo apt-get install pigpio
+
 $ git clone https://github.com/crossa/raspberry-pi-ppm-rc-in
+
 $ cd raspberry-pi-ppm-rc-in
+
 $ ./configure && make && make install
 
 
